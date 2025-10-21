@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Revistas em Quadrinhos Mais Vendidas do Homem-Aranha</title>
+    <style>
+        table, th, td {
+            border: 1px solid #333;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Revistas em Quadrinhos Mais Vendidas do Homem-Aranha</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Capa</th>
+                <th>Título</th>
+                <th>Ano</th>
+                <th>Vendas Aproximadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="/home/professor/Imagens/amazing fantasy spider man.jpeg" alt="Amazing Fantasy #15"></td>
+                <td>Amazing Fantasy #15</td>
+                <td>1962</td>
+                <td>Mais de 1 milhão</td>
+            </tr>
+            <tr>
+                <td><img src="/home/professor/Imagens/the amazing spider man hq.jpg" alt="The Amazing Spider-Man #300"></td>
+                <td>The Amazing Spider-Man #300</td>
+                <td>1988</td>
+                <td>350.000</td>
+            </tr>
+            <tr>
+                <td><img src="/home/professor/Imagens/spider man #1 comic.jpg" alt="Spider-Man #1"></td>
+                <td>Spider-Man #1</td>
+                <td>1990</td>
+                <td>Mais de 2,5 milhões</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Lista das Revistas</h2>
+    <ul>
+        <li>
+            <alt= Amazing Fantasy #15>
+            Amazing Fantasy #15 (1962)
+        </li>
+        <li>
+            <alt= The Amazing Spider-Man #300>
+            The Amazing Spider-Man #300 (1988)
+        </li>
+        <li>
+            <alt= Spider-Man #1>
+            Spider-Man #1 (1990)
+        </li>
+    </ul>
+</body>
+</html>
