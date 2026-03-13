@@ -1,0 +1,15 @@
+public class doisnumerosoperaçao {
+    public static void main(String[] args) {
+        int num1 =10;
+        int num2 = 5;
+        int soma = num1 + num2;
+        int subtração = num1 - num2;
+        int multiplicação = num1 * num2;
+        int divisão = num1/num2;
+        System.out.println("Soma: "+ soma);
+        System.out.println("Subtração: "+ subtração);
+        System.out.println("Multiplicação: "+ multiplicação);
+        System.out.println("Divisão: "+ divisão);
+    }
+    
+}
