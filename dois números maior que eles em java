@@ -1,0 +1,11 @@
+public class doisnumerosemaiordeles {
+    public static void main (String[] args)
+    { int num = 6;
+        int num2 = 3;
+        if (num>num2) {
+            System.out.print("Este número é maior: "+num);
+        } else {
+            System.out.println("Este número é maior: "+num2);
+        }
+    }
+}
