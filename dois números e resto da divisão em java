@@ -1,0 +1,10 @@
+public class doiserestodivisao {
+ public static void main (String[] args)
+ { int num =2;
+   int num2 = 3;
+   int result= num/num2;
+   int rest = num%num2;
+   System.out.println("O resultado é: "+result);
+   System.out.println("o resto é: "+rest);
+ }
+}
