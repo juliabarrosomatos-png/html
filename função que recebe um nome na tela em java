@@ -1,0 +1,22 @@
+public class funçaoquerecebeumnomeemostrarconformeohorario {
+    public static void main(String[] argas) {
+        String nome="Bom dia!";
+        String nome2= "Boa tarde!";
+        String nome3= "Boa noite!";
+        int hora= 20;
+
+        if (hora > 5 && hora <12){
+            System.out.println("Bom dia!"+ nome);
+        }else if (hora > 12  && hora < 18){
+            System.out.println("Boa tarde!"+ nome2);
+        }else if (hora > 18 && hora < 00){
+            System.out.println("Boa noite!"+ nome3);
+        }
+
+
+        }
+
+
+
+    
+}
