@@ -1,0 +1,12 @@
+public class funçaobomdiatresvezes {
+    public static void main(String[] args) {
+        String nome= "Bom dia!";
+        int hora= 10;
+        if (hora > 5 && hora < 12){
+            System.out.println(nome);
+            System.out.println(nome);
+            System.out.println(nome);
+        }
+    }
+    
+}
