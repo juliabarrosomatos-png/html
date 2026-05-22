@@ -1,0 +1,131 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Fulano {
+
+    private String nome;
+
+    public Fulano(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String apresentacao() {
+        return "Diz cara, eu sou " + nome;
+    }
+
+    public String apresentacao(Fulano fulano) {
+        return "Olá " + fulano.getNome() + ", eu sou " + nome;
+    }
+
+    public String apresentacao(Professor professor) {
+        return "Olá professor " + professor.getNome() + ", eu sou " + nome;
+    }
+
+    public String apresentacao(Aluno aluno) {
+        return "Olá jovem " + aluno.getNome() + ", eu sou " + nome;
+    }
+
+    public String saudacao() {
+        return nome + " diz: Olá!";
+    }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(Fulano::createAndShowGUI);
+    }
+
+    private static void createAndShowGUI() {
+        Fulano p = new Fulano("Carlos");
+        Aluno a = new Aluno("Julia", "2025001");
+        Professor pr = new Professor("Marcos", "Java");
+
+        JFrame janela = new JFrame("Sistema de Pessoas");
+
+        janela.setSize(500, 400);
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        janela.setLayout(new BorderLayout()); 
+
+        JTextArea area = new JTextArea();
+        area.setEditable(false);
+        area.setLineWrap(true);
+        area.setWrapStyleWord(true);
+        area.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
+
+        JScrollPane scroll = new JScrollPane(area);
+
+        JPanel painel = new JPanel();
+
+        JButton btnApresentacao = new JButton("Apresentações");
+        JButton btnSaudacao = new JButton("Saudações");
+
+        painel.add(btnApresentacao);
+        painel.add(btnSaudacao);
+
+        btnApresentacao.addActionListener(e -> {
+            area.setText("");
+            area.append(p.apresentacao() + "\n");
+            area.append(a.apresentacao() + "\n");
+            area.append(pr.apresentacao() + "\n\n");
+            area.append(p.apresentacao(a) + "\n");
+            area.append(a.apresentacao(p) + "\n");
+            area.append(pr.apresentacao(a) + "\n");
+        });
+
+        btnSaudacao.addActionListener(e -> {
+            area.append("\n");
+            area.append(p.saudacao() + "\n");
+            area.append(a.saudacao() + "\n");
+            area.append(pr.saudacao() + "\n");
+        });
+
+        janela.add(scroll, BorderLayout.CENTER);
+        janela.add(painel, BorderLayout.SOUTH);
+        janela.setLocationRelativeTo(null);
+        janela.setVisible(true);
+    }
+}
+
+
+class Aluno extends Fulano {
+
+    private String matricula;
+
+    public Aluno(String nome, String matricula) {
+        super(nome);
+        this.matricula = matricula;
+    }
+
+    @Override
+    public String apresentacao() {
+        return "Olá, eu sou a aluna " + getNome();
+    }
+
+    @Override
+    public String saudacao() {
+        return getNome() + " diz: E aí professor!";
+    }
+}
+
+
+class Professor extends Fulano {
+
+    private String disciplina;
+
+    public Professor(String nome, String disciplina) {
+        super(nome);
+        this.disciplina = disciplina;
+    }
+
+    @Override
+    public String apresentacao() {
+        return "Olá, eu sou o professor " + getNome() +
+               " da disciplina de " + disciplina;
+    }
+
+    @Override
+    public String saudacao() {
+        return getNome() + " diz: Bom dia, turma!";
+    }
+}
